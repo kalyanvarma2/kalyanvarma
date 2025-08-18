@@ -32,8 +32,8 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-12">
           {/* About heading and content at the top */}
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8">
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8 text-center">
               {t.about.title}
             </h2>
 
@@ -59,8 +59,8 @@ export function AboutSection() {
               ))}
             </div>
 
-            <div className="prose prose-lg max-w-4xl mx-auto">
-              <p className="text-muted-foreground leading-relaxed text-lg">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-muted-foreground leading-relaxed text-lg text-left">
                 {t.about.content}
               </p>
             </div>
