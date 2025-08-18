@@ -31,7 +31,7 @@ export function AboutSection() {
     <section id="about" className="relative py-20 bg-muted/30 overflow-hidden">
       {/* Subtle crop field background */}
       <div
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-15"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=1200&h=800&fit=crop')",
           backgroundSize: 'cover',
