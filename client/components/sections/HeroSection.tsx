@@ -14,18 +14,8 @@ export function HeroSection() {
 
   return (
     <section id="hero" className="relative py-20 lg:py-32 overflow-hidden">
-      {/* Background with farm imagery */}
+      {/* Background pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-earth-50" />
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1200&h=800&fit=crop')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-br from-green-50/80 to-earth-50/80" />
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
