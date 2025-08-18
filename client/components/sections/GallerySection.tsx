@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Camera, X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Camera, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function GallerySection() {
   const { language } = useLanguage();
@@ -12,39 +12,40 @@ export function GallerySection() {
     {
       src: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&h=600&fit=crop",
       alt: "Field research work",
-      caption: "Conducting field trials in agricultural research"
+      caption: "Conducting field trials in agricultural research",
     },
     {
       src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
       alt: "Laboratory work",
-      caption: "Molecular techniques and lab analysis"
+      caption: "Molecular techniques and lab analysis",
     },
     {
       src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop",
       alt: "Crop observation",
-      caption: "Disease phenotyping and crop assessment"
+      caption: "Disease phenotyping and crop assessment",
     },
     {
       src: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=800&h=600&fit=crop",
       alt: "Data collection",
-      caption: "Statistical data analytics in the field"
+      caption: "Statistical data analytics in the field",
     },
     {
       src: "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=800&h=600&fit=crop",
       alt: "Farmer consultation",
-      caption: "Providing technical knowledge to farmers"
+      caption: "Providing technical knowledge to farmers",
     },
     {
       src: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop",
       alt: "Research presentation",
-      caption: "Scientific events and knowledge sharing"
-    }
+      caption: "Scientific events and knowledge sharing",
+    },
   ];
 
-  const title = language === 'en' ? "Gallery" : "గ్యాలరీ";
-  const subtitle = language === 'en'
-    ? "A glimpse into my field research and laboratory work"
-    : "నా క్షేత్ర పరిశోధన మరియు ప్రయోగశాల పనుల చూపులు";
+  const title = language === "en" ? "Gallery" : "గ్యాలరీ";
+  const subtitle =
+    language === "en"
+      ? "A glimpse into my field research and laboratory work"
+      : "నా క్షేత్ర పరిశోధన మరియు ప్రయోగశాల పనుల చూపులు";
 
   const openImage = (index: number) => {
     setSelectedImage(index);
@@ -54,13 +55,17 @@ export function GallerySection() {
     setSelectedImage(null);
   };
 
-  const navigateImage = (direction: 'prev' | 'next') => {
+  const navigateImage = (direction: "prev" | "next") => {
     if (selectedImage === null) return;
-    
-    if (direction === 'prev') {
-      setSelectedImage(selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1);
+
+    if (direction === "prev") {
+      setSelectedImage(
+        selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1,
+      );
     } else {
-      setSelectedImage(selectedImage === galleryImages.length - 1 ? 0 : selectedImage + 1);
+      setSelectedImage(
+        selectedImage === galleryImages.length - 1 ? 0 : selectedImage + 1,
+      );
     }
   };
 
@@ -79,7 +84,7 @@ export function GallerySection() {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {galleryImages.map((image, index) => (
-            <div 
+            <div
               key={index}
               className="group cursor-pointer overflow-hidden rounded-xl bg-card border border-border hover:shadow-lg transition-all duration-300"
               onClick={() => openImage(index)}
@@ -107,9 +112,12 @@ export function GallerySection() {
         <div className="text-center">
           <div className="bg-card rounded-xl p-8 shadow-sm border border-border border-dashed">
             <Camera className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-foreground mb-2">More Photos Coming Soon</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-2">
+              More Photos Coming Soon
+            </h3>
             <p className="text-muted-foreground mb-4">
-              I'm preparing more photos from my field research and laboratory work to share with you.
+              I'm preparing more photos from my field research and laboratory
+              work to share with you.
             </p>
           </div>
         </div>
@@ -123,7 +131,7 @@ export function GallerySection() {
                 alt={galleryImages[selectedImage].alt}
                 className="max-w-full max-h-full object-contain rounded-lg"
               />
-              
+
               {/* Close button */}
               <Button
                 variant="outline"
@@ -133,26 +141,26 @@ export function GallerySection() {
               >
                 <X className="h-4 w-4" />
               </Button>
-              
+
               {/* Navigation buttons */}
               <Button
                 variant="outline"
                 size="icon"
                 className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 border-white/20 text-white hover:bg-black/70"
-                onClick={() => navigateImage('prev')}
+                onClick={() => navigateImage("prev")}
               >
                 <ChevronLeft className="h-4 w-4" />
               </Button>
-              
+
               <Button
                 variant="outline"
                 size="icon"
                 className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 border-white/20 text-white hover:bg-black/70"
-                onClick={() => navigateImage('next')}
+                onClick={() => navigateImage("next")}
               >
                 <ChevronRight className="h-4 w-4" />
               </Button>
-              
+
               {/* Caption */}
               <div className="absolute bottom-4 left-4 right-4 text-center">
                 <p className="text-white bg-black/50 rounded-lg px-4 py-2 backdrop-blur-sm">
