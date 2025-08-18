@@ -29,8 +29,8 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="text-center lg:text-left">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="text-center lg:text-left order-2 lg:order-1">
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <Leaf className="h-6 w-6 text-primary" />
@@ -71,9 +71,9 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative order-1 lg:order-2">
             {/* Profile Picture */}
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center lg:justify-start mb-8">
               <div className="relative">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F8be6b11ebff64b34aed1f9197290caed%2Faa47cd6c80204bfaa5127bd7b38bdd0f?format=webp&width=800"
