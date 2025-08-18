@@ -30,19 +30,9 @@ export function AboutSection() {
   return (
     <section id="about" className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              {t.about.title}
-            </h2>
-            <div className="prose prose-lg max-w-none">
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                {t.about.content}
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="space-y-12">
+          {/* Highlight boxes at the top */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {highlights.map((item, index) => (
               <div
                 key={index}
@@ -61,6 +51,18 @@ export function AboutSection() {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* About content below */}
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+              {t.about.title}
+            </h2>
+            <div className="prose prose-lg max-w-4xl mx-auto">
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                {t.about.content}
+              </p>
+            </div>
           </div>
         </div>
       </div>
