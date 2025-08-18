@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Globe, Menu, X } from 'lucide-react';
-import { 
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Globe, Menu, X } from "lucide-react";
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from "@/components/ui/dropdown-menu";
 
 export function Navigation() {
   const { language, setLanguage, t } = useLanguage();
@@ -16,17 +16,17 @@ export function Navigation() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMobileMenuOpen(false);
   };
 
   const navItems = [
-    { key: 'about', label: t.nav.about },
-    { key: 'services', label: t.nav.services },
-    { key: 'experience', label: t.nav.experience },
-    { key: 'insights', label: t.nav.insights },
-    { key: 'contact', label: t.nav.contact },
+    { key: "about", label: t.nav.about },
+    { key: "services", label: t.nav.services },
+    { key: "experience", label: t.nav.experience },
+    { key: "insights", label: t.nav.insights },
+    { key: "contact", label: t.nav.contact },
   ];
 
   return (
@@ -35,7 +35,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
           <button
-            onClick={() => scrollToSection('hero')}
+            onClick={() => scrollToSection("hero")}
             className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
           >
             {t.hero.name}
@@ -52,20 +52,20 @@ export function Navigation() {
                 {item.label}
               </button>
             ))}
-            
+
             {/* Language Switcher */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="sm" className="gap-2">
                   <Globe className="h-4 w-4" />
-                  {language === 'en' ? 'EN' : 'తె'}
+                  {language === "en" ? "EN" : "తె"}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setLanguage('en')}>
+                <DropdownMenuItem onClick={() => setLanguage("en")}>
                   English
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage('te')}>
+                <DropdownMenuItem onClick={() => setLanguage("te")}>
                   తెలుగు
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -78,25 +78,29 @@ export function Navigation() {
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="sm" className="gap-2">
                   <Globe className="h-4 w-4" />
-                  {language === 'en' ? 'EN' : 'తె'}
+                  {language === "en" ? "EN" : "తె"}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setLanguage('en')}>
+                <DropdownMenuItem onClick={() => setLanguage("en")}>
                   English
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage('te')}>
+                <DropdownMenuItem onClick={() => setLanguage("te")}>
                   తెలుగు
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            
+
             <Button
               variant="outline"
               size="sm"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+              {isMobileMenuOpen ? (
+                <X className="h-4 w-4" />
+              ) : (
+                <Menu className="h-4 w-4" />
+              )}
             </Button>
           </div>
         </div>

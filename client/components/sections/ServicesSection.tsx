@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Shield, Leaf, TestTube, Sprout, ArrowRight } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Shield, Leaf, TestTube, Sprout, ArrowRight } from "lucide-react";
 
 export function ServicesSection() {
   const { t } = useLanguage();
@@ -8,9 +8,9 @@ export function ServicesSection() {
   const serviceIcons = [Shield, Leaf, TestTube, Sprout];
 
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
+    const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -30,7 +30,7 @@ export function ServicesSection() {
           {t.services.items.map((service, index) => {
             const IconComponent = serviceIcons[index];
             return (
-              <div 
+              <div
                 key={index}
                 className="group bg-card rounded-xl p-6 shadow-sm border border-border hover:shadow-lg hover:border-primary/20 transition-all duration-300"
               >
@@ -49,11 +49,7 @@ export function ServicesSection() {
         </div>
 
         <div className="text-center">
-          <Button 
-            size="lg" 
-            onClick={scrollToContact}
-            className="group"
-          >
+          <Button size="lg" onClick={scrollToContact} className="group">
             {t.services.cta}
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>

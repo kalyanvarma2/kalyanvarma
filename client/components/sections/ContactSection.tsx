@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Send, Mail, Phone, MapPin } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Send, Mail, Phone, MapPin } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 export function ContactSection() {
   const { t } = useLanguage();
@@ -15,15 +15,15 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     toast({
       title: "Message sent!",
       description: "Thank you for your message. I'll get back to you soon.",
     });
-    
+
     setIsSubmitting(false);
     (e.target as HTMLFormElement).reset();
   };
@@ -44,7 +44,9 @@ export function ContactSection() {
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-semibold text-foreground mb-6">Get in Touch</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-6">
+                Get in Touch
+              </h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -55,7 +57,7 @@ export function ContactSection() {
                     <p className="text-muted-foreground">kalyan@example.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Phone className="h-5 w-5 text-primary" />
@@ -65,7 +67,7 @@ export function ContactSection() {
                     <p className="text-muted-foreground">+49 123 456 7890</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <MapPin className="h-5 w-5 text-primary" />
@@ -77,11 +79,14 @@ export function ContactSection() {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-primary/5 rounded-xl p-6 border border-primary/10">
-              <h4 className="font-semibold text-foreground mb-2">Free Consultation</h4>
+              <h4 className="font-semibold text-foreground mb-2">
+                Free Consultation
+              </h4>
               <p className="text-sm text-muted-foreground">
-                Offering free farmer consultation to support sustainable agriculture and honor those who feed the world.
+                Offering free farmer consultation to support sustainable
+                agriculture and honor those who feed the world.
               </p>
             </div>
           </div>
@@ -92,53 +97,53 @@ export function ContactSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="name">{t.contact.form.name}</Label>
-                  <Input 
-                    id="name" 
-                    name="name" 
-                    required 
+                  <Input
+                    id="name"
+                    name="name"
+                    required
                     className="mt-1"
                     placeholder="Your full name"
                   />
                 </div>
                 <div>
                   <Label htmlFor="phone">{t.contact.form.phone}</Label>
-                  <Input 
-                    id="phone" 
-                    name="phone" 
+                  <Input
+                    id="phone"
+                    name="phone"
                     type="tel"
                     className="mt-1"
                     placeholder="Your phone number"
                   />
                 </div>
               </div>
-              
+
               <div>
                 <Label htmlFor="email">{t.contact.form.email}</Label>
-                <Input 
-                  id="email" 
-                  name="email" 
-                  type="email" 
-                  required 
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
                   className="mt-1"
                   placeholder="your.email@example.com"
                 />
               </div>
-              
+
               <div>
                 <Label htmlFor="message">{t.contact.form.message}</Label>
-                <Textarea 
-                  id="message" 
-                  name="message" 
+                <Textarea
+                  id="message"
+                  name="message"
                   required
                   rows={4}
                   className="mt-1"
                   placeholder="Tell me about your agricultural needs and how I can help..."
                 />
               </div>
-              
-              <Button 
-                type="submit" 
-                size="lg" 
+
+              <Button
+                type="submit"
+                size="lg"
                 className="w-full group"
                 disabled={isSubmitting}
               >

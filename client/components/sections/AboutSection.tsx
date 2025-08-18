@@ -1,5 +1,5 @@
-import { useLanguage } from '@/contexts/LanguageContext';
-import { GraduationCap, Microscope, Sprout, BarChart3 } from 'lucide-react';
+import { useLanguage } from "@/contexts/LanguageContext";
+import { GraduationCap, Microscope, Sprout, BarChart3 } from "lucide-react";
 
 export function AboutSection() {
   const { t } = useLanguage();
@@ -8,23 +8,23 @@ export function AboutSection() {
     {
       icon: GraduationCap,
       title: "Academic Excellence",
-      description: "Master's at University of Hohenheim, Germany"
+      description: "Master's at University of Hohenheim, Germany",
     },
     {
       icon: Microscope,
       title: "Research Focus",
-      description: "Field trials, molecular techniques, and data analysis"
+      description: "Field trials, molecular techniques, and data analysis",
     },
     {
       icon: Sprout,
       title: "Sustainable Solutions",
-      description: "Eco-friendly crop protection strategies"
+      description: "Eco-friendly crop protection strategies",
     },
     {
       icon: BarChart3,
       title: "Data-Driven",
-      description: "Statistical analytics and market analysis"
-    }
+      description: "Statistical analytics and market analysis",
+    },
   ];
 
   return (
@@ -41,10 +41,10 @@ export function AboutSection() {
               </p>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {highlights.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-card rounded-lg p-6 shadow-sm border border-border hover:shadow-md transition-shadow"
               >
@@ -53,8 +53,12 @@ export function AboutSection() {
                     <item.icon className="h-5 w-5 text-primary" />
                   </div>
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <h3 className="font-semibold text-foreground mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
