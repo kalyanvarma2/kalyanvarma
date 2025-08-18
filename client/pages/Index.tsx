@@ -11,8 +11,8 @@ export default function Index() {
     <Layout>
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
       <ExperienceSection />
+      <ServicesSection />
       <InsightsSection />
       <ContactSection />
     </Layout>
