@@ -8,7 +8,7 @@ export function ExperienceSection() {
     <section id="experience" className="relative py-20 bg-muted/30 overflow-hidden">
       {/* Agricultural background */}
       <div
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-15"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&h=800&fit=crop')",
           backgroundSize: 'cover',
