@@ -5,7 +5,18 @@ export function ExperienceSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="experience" className="py-20 bg-muted/30">
+    <section id="experience" className="relative py-20 bg-muted/30 overflow-hidden">
+      {/* Agricultural background */}
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&h=800&fit=crop')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      <div className="absolute inset-0 bg-muted/30" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
