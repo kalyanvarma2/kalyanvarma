@@ -5,6 +5,7 @@ export const content = {
       services: "Services",
       experience: "Experience",
       insights: "Insights",
+      gallery: "Gallery",
       contact: "Contact",
     },
     hero: {
@@ -112,6 +113,7 @@ export const content = {
       services: "సేవలు",
       experience: "అనుభవం",
       insights: "అంతర్దృష్టులు",
+      gallery: "గ్యాలరీ",
       contact: "సంప్రదింపులు",
     },
     hero: {
@@ -197,7 +199,7 @@ export const content = {
     },
     insights: {
       title: "తాజా అంతర్దృష్టులు",
-      subtitle: "పంట రక్షణ మరియు వ్యవసాయంలో తాజా విషయాలతో అప్‌డేట్ అవ్వండి",
+      subtitle: "పంట రక్షణ మరియు వ్యవసాయంలో తాజా వ��షయాలతో అప్‌డేట్ అవ్వండి",
     },
     contact: {
       title: "సంప్రదించండి",
