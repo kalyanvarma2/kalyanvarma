@@ -23,9 +23,11 @@ export function Navigation() {
 
   const navItems = [
     { key: "about", label: t.nav.about },
-    { key: "services", label: t.nav.services },
     { key: "experience", label: t.nav.experience },
+    { key: "projects", label: t.nav.projects },
+    { key: "services", label: t.nav.services },
     { key: "insights", label: t.nav.insights },
+    { key: "gallery", label: t.nav.gallery },
     { key: "contact", label: t.nav.contact },
   ];
 
