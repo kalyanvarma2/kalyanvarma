@@ -41,9 +41,9 @@ export function GallerySection() {
     }
   ];
 
-  const title = language === 'en' ? "Research Gallery" : "పరిశోధన గ్యాలరీ";
-  const subtitle = language === 'en' 
-    ? "A glimpse into my field research and laboratory work" 
+  const title = language === 'en' ? "Gallery" : "గ్యాలరీ";
+  const subtitle = language === 'en'
+    ? "A glimpse into my field research and laboratory work"
     : "నా క్షేత్ర పరిశోధన మరియు ప్రయోగశాల పనుల చూపులు";
 
   const openImage = (index: number) => {
