@@ -15,6 +15,7 @@ export default function Index() {
       <ExperienceSection />
       <ServicesSection />
       <InsightsSection />
+      <GallerySection />
       <ContactSection />
     </Layout>
   );
