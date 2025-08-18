@@ -78,7 +78,7 @@ export function HeroSection() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F8be6b11ebff64b34aed1f9197290caed%2Faa47cd6c80204bfaa5127bd7b38bdd0f?format=webp&width=800"
                   alt="Kalyan Varma - Crop Sciences Researcher"
-                  className="w-64 h-80 lg:w-72 lg:h-96 rounded-2xl object-cover border-4 border-primary/20 shadow-lg"
+                  className="w-72 h-72 lg:w-80 lg:h-80 rounded-2xl object-cover object-top border-4 border-primary/20 shadow-lg"
                 />
                 <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
                   <Leaf className="h-8 w-8 text-primary-foreground" />
