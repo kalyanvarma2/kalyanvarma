@@ -28,7 +28,18 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="relative py-20 bg-muted/30 overflow-hidden">
+      {/* Subtle crop field background */}
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=1200&h=800&fit=crop')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      <div className="absolute inset-0 bg-muted/30" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-12">
           {/* About heading and content at the top */}
