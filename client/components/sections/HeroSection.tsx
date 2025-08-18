@@ -17,7 +17,7 @@ export function HeroSection() {
       {/* Background with farm imagery */}
       <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-earth-50" />
       <div
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1200&h=800&fit=crop&crop=center')",
           backgroundSize: 'cover',
