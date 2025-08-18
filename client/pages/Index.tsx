@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { InsightsSection } from "@/components/sections/InsightsSection";
+import { GallerySection } from "@/components/sections/GallerySection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Index() {
