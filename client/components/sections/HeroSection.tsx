@@ -120,7 +120,7 @@ export function HeroSection() {
                     500+
                   </span>
                 </div>
-                <p className="text-sm text-muted-foreground">Farmers Helped</p>
+                <p className="text-sm text-muted-foreground">Farmer Consultations</p>
               </div>
 
               <div className="bg-card rounded-lg p-6 shadow-sm border border-border col-span-2">
