@@ -38,28 +38,6 @@ export function AboutSection() {
               {t.about.title}
             </h2>
 
-            {/* Highlight boxes after heading */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {highlights.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-card rounded-lg p-6 shadow-sm border border-border hover:shadow-md transition-shadow"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <item.icon className="h-5 w-5 text-primary" />
-                    </div>
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground leading-relaxed text-lg text-left">
                 {t.about.content}
