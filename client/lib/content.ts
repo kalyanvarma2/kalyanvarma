@@ -19,8 +19,11 @@ export const content = {
     },
     about: {
       title: "About Me",
-      content:
-        "I am a passionate researcher and Master's student at the prestigious University of Hohenheim in Stuttgart, Germany, specializing in Plant Protection and Nutrition (Crop Sciences). With 8+ years of industry experience in crop protection and fertilizer companies, I have extensive expertise in farmer outreach, delivering technical knowledge through field demonstrations, scientific events, and customized advisory programs. I am skilled in crop protection advisory, stakeholder engagement, market analysis, regulatory compliance, and statistical data analytics. I bring hands-on expertise in field trials, disease phenotyping, and molecular techniques such as PCR and nucleic acid extraction. I am technically proficient in the modes of action of herbicides, fungicides, and insecticides, with a strong understanding of resistance management and integrated crop protection strategies. Passionate about combining field and laboratory expertise, I am committed to advancing sustainable crop improvement and delivering practical solutions that empower farmers. Motivated by the challenges of chemical overuse in pest and disease management, I aim to develop targeted, eco-friendly approaches. I am particularly interested in harnessing RNA interference (RNAi) technology to design precise, efficient, and sustainable pest and disease control strategies, along with precision application of herbicides, insecticides, and fungicides to minimize inputs while maximizing crop productivity and environmental safety.",
+      content: [
+        "I am a passionate researcher and Master's student at the prestigious University of Hohenheim in Stuttgart, Germany, specializing in Plant Protection and Nutrition (Crop Sciences). With 8+ years of industry experience in crop protection and fertilizer companies, I have extensive expertise in farmer outreach, delivering technical knowledge through field demonstrations, scientific events, and customized advisory programs.",
+        "I am skilled in crop protection advisory, stakeholder engagement, market analysis, regulatory compliance, and statistical data analytics. I bring hands-on expertise in field trials, disease phenotyping, and molecular techniques such as PCR and nucleic acid extraction. I am technically proficient in the modes of action of herbicides, fungicides, and insecticides, with a strong understanding of resistance management and integrated crop protection strategies.",
+        "Passionate about combining field and laboratory expertise, I am committed to advancing sustainable crop improvement and delivering practical solutions that empower farmers. Motivated by the challenges of chemical overuse in pest and disease management, I aim to develop targeted, eco-friendly approaches. I am particularly interested in harnessing RNA interference (RNAi) technology to design precise, efficient, and sustainable pest and disease control strategies, along with precision application of herbicides, insecticides, and fungicides to minimize inputs while maximizing crop productivity and environmental safety."
+      ],
     },
     services: {
       title: "Services & Consultation",
@@ -130,12 +133,12 @@ export const content = {
     about: {
       title: "���ా గురించి",
       content:
-        "పంట రక్షణ మరియు వ్యవసాయంలో 8 సంవత్సరాలకు మించిన అనుభవంతో, నేను సమగ్ర కీటక నిర్వహణ, మట్టి ఆరోగ్య అనుకూలీకరణ మరియు స్థిరమైన వ్యవసాయ పద్ధతులలో నైపుణ్యం కలిగి ఉన్నాను. నేను వ్యవసాయ శాస్త్రాలలో మాస్టర్స్ డిగ్రీ పొందాను మరియు వివిధ పంట వ్యవస్థలలో విస్తృతమైన క్షేత్ర పరీక్షలు నిర్వహించాను. పర్యావరణ స్థిరత్వాన్ని కాపాడుతూ రైతులు మెరుగైన దిగుబడిని సాధించడంలో సహాయపడడంలో నా అభిరుచి ఉంది.",
+        "పంట రక్షణ మరియు ��్యవసాయంలో 8 సంవత్సరాలకు మించిన అనుభవంతో, నేను సమగ్ర కీటక నిర్వహణ, మట్టి ఆరోగ్య అనుకూలీకరణ మరియు స్థిరమైన వ్యవసాయ పద్ధతులలో నైపుణ్యం కలిగి ఉన్నాను. నేను వ్యవసాయ శాస్త్రాలలో మాస్టర్స్ డిగ్రీ పొందాను మరియు వివిధ పంట వ్యవస్థలలో విస్తృతమైన క్షేత్ర పరీక్షలు నిర్వహించాను. పర్యావరణ స్థిరత్వాన్ని కాపాడుతూ రైతులు మెరుగైన దిగుబడిని సాధించడంలో సహాయపడడంలో నా అభిరుచి ఉంది.",
     },
     services: {
       title: "సేవలు & సలహాలు",
       description:
-        "రైతులకు ఉచిత సలహాలు - స్థిరమైన పంట రక్షణ, కీటక నిర్వహణ మరియు ��ట్టి ఆరోగ్యానికి మద్దతు అందించడం—ప్రపంచాన్ని పోషించే వారిని గౌరవించడం.",
+        "రైతులకు ఉచిత సలహాలు - స్థిరమైన పంట రక్షణ, కీటక నిర్వహణ మరియు ��ట్టి ఆరోగ్యానికి మద్దతు అంది���చడం—ప్రపంచాన్ని పోషించే వారిని గౌరవించడం.",
       items: [
         {
           title: "పంట రక్షణ సలహా",
@@ -169,7 +172,7 @@ export const content = {
           company: "హోహెన్‌హైమ్ విశ్వవిద్యాలయం",
           period: "అక్టోబర్'2024 - ప్రస్తుతం",
           description:
-            "పరిమిత ఫాస్ఫేట్ వనరులకు మొక్కజొన్న-ఆధారిత ఆహార-మేత-శక్తి వ్యవస్థల అనుకూలతపై AMAIZE-P ప్రాజెక్ట్‌లో విద్యార్థి సహాయ��ుడిగా, మొక్కజొన్నలో ఫాస్ఫేట్ సేకరణ మరియు దిగుబడి లక్షణాల జన్యురూప-నుండి-వర్ణోత్పత్తి మోడలింగ్ కోసం వర్ణోత్పత్తి డేటా సేకరణకు మద్దతు ఇవ్వడం.",
+            "పరిమిత ఫాస్ఫేట్ వనరులకు మొక్కజొన్న-ఆధారిత ఆహార-మేత-శక్తి వ్యవస్థల అనుకూలతపై AMAIZE-P ప్రాజెక్ట్‌లో విద్యార్థి సహా�����ుడిగా, మొక్కజొన్నలో ఫాస్ఫేట్ సేకరణ మరియు దిగుబడి లక్షణాల జన్యురూప-నుండి-వ��్ణోత్పత్తి మోడలింగ్ కోసం వర్ణోత్పత్తి డేటా సేకరణకు మద్దతు ఇవ్వడం.",
         },
         {
           title: "సీనియర్ టెరిటరీ మేనేజర్",
