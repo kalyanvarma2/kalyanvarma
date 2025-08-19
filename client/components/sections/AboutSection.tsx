@@ -38,10 +38,18 @@ export function AboutSection() {
               {t.about.title}
             </h2>
 
-            <div className="prose prose-lg max-w-none">
-              <p className="text-muted-foreground leading-relaxed text-lg text-left">
-                {t.about.content}
-              </p>
+            <div className="prose prose-lg max-w-none space-y-6">
+              {Array.isArray(t.about.content) ? (
+                t.about.content.map((paragraph, index) => (
+                  <p key={index} className="text-muted-foreground leading-relaxed text-lg text-left">
+                    {paragraph}
+                  </p>
+                ))
+              ) : (
+                <p className="text-muted-foreground leading-relaxed text-lg text-left">
+                  {t.about.content}
+                </p>
+              )}
             </div>
 
             {/* Social Media Connections */}
