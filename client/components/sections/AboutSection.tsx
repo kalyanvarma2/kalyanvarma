@@ -1,5 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { GraduationCap, Microscope, Sprout, BarChart3 } from "lucide-react";
+import { GraduationCap, Microscope, Sprout, BarChart3, Linkedin, Github, Instagram, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function AboutSection() {
   const { t } = useLanguage();
