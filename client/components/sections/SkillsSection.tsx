@@ -1,5 +1,5 @@
-import { useLanguage } from '@/contexts/LanguageContext';
-import { FlaskConical, BarChart3, Dna, Code2 } from 'lucide-react';
+import { useLanguage } from "@/contexts/LanguageContext";
+import { FlaskConical, BarChart3, Dna, Code2 } from "lucide-react";
 
 export function SkillsSection() {
   const { language } = useLanguage();
@@ -7,33 +7,41 @@ export function SkillsSection() {
   const skillCategories = [
     {
       icon: FlaskConical,
-      title: language === 'en' ? "Laboratory Techniques" : "ప్రయోగశాల సాంకేతికతలు",
+      title:
+        language === "en" ? "Laboratory Techniques" : "ప్రయోగశాల సాంకేతికతలు",
       skills: ["qPCR", "RNA/DNA Extraction"],
-      color: "bg-blue-500/10 text-blue-600 border-blue-200"
+      color: "bg-blue-500/10 text-blue-600 border-blue-200",
     },
     {
       icon: BarChart3,
-      title: language === 'en' ? "Data Analytics & Visualization" : "డేటా విశ్లేషణ & దృశ్యీకరణ",
+      title:
+        language === "en"
+          ? "Data Analytics & Visualization"
+          : "డేటా విశ్లేషణ & దృశ్యీకరణ",
       skills: ["R", "SAS", "MS Office Suite"],
-      color: "bg-green-500/10 text-green-600 border-green-200"
+      color: "bg-green-500/10 text-green-600 border-green-200",
     },
     {
       icon: Dna,
-      title: language === 'en' ? "Research & Experimentation" : "పరిశోధన & ప్రయోగాలు",
+      title:
+        language === "en"
+          ? "Research & Experimentation"
+          : "పరిశోధన & ప్రయోగాలు",
       skills: [
         "CRISPR-Cas gene editing",
         "Molecular cloning & Design",
         "GLP-compliant agronomic field trials",
-        "Statistical analysis"
+        "Statistical analysis",
       ],
-      color: "bg-purple-500/10 text-purple-600 border-purple-200"
-    }
+      color: "bg-purple-500/10 text-purple-600 border-purple-200",
+    },
   ];
 
-  const title = language === 'en' ? "Technical Expertise" : "సాంకేతిక నైపుణ్యం";
-  const subtitle = language === 'en' 
-    ? "Specialized skills in modern agricultural research and biotechnology" 
-    : "ఆధునిక వ్యవసాయ పరిశోధన మరియు బయోటెక్నాలజీలో ప్రత్యేక నైపుణ్యాలు";
+  const title = language === "en" ? "Technical Expertise" : "సాంకేతిక నైపుణ్యం";
+  const subtitle =
+    language === "en"
+      ? "Specialized skills in modern agricultural research and biotechnology"
+      : "ఆధునిక వ్యవసాయ పరిశోధన మరియు బయోటెక్నాలజీలో ప్రత్యేక నైపుణ్యాలు";
 
   return (
     <section id="skills" className="py-20">
@@ -64,12 +72,14 @@ export function SkillsSection() {
               <div className="bg-card rounded-b-xl border-2 border-t-0 border-border p-6 shadow-sm hover:shadow-md transition-all duration-300 group-hover:border-primary/20">
                 <div className="space-y-3">
                   {category.skills.map((skill, skillIndex) => (
-                    <div 
+                    <div
                       key={skillIndex}
                       className="flex items-center gap-3 p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
                     >
                       <div className="h-2 w-2 rounded-full bg-primary"></div>
-                      <span className="text-sm font-medium text-foreground">{skill}</span>
+                      <span className="text-sm font-medium text-foreground">
+                        {skill}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -83,10 +93,9 @@ export function SkillsSection() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium">
             <Code2 className="h-4 w-4" />
             <span>
-              {language === 'en' 
-                ? "Advancing agricultural innovation through technology" 
-                : "సాంకేతికత ద్వారా వ్యవసాయ ఆవిష్కరణలను అభివృద్ధి చేయడం"
-              }
+              {language === "en"
+                ? "Advancing agricultural innovation through technology"
+                : "సాంకేతికత ద్వారా వ్యవసాయ ఆవిష్కరణలను అభివృద్ధి చేయడం"}
             </span>
           </div>
         </div>

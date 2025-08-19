@@ -21,10 +21,11 @@ export function HeroSection() {
       <div
         className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1400&h=900&fit=crop')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center bottom',
-          backgroundRepeat: 'no-repeat'
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1400&h=900&fit=crop')",
+          backgroundSize: "cover",
+          backgroundPosition: "center bottom",
+          backgroundRepeat: "no-repeat",
         }}
       />
 
@@ -120,7 +121,9 @@ export function HeroSection() {
                     500+
                   </span>
                 </div>
-                <p className="text-sm text-muted-foreground">Farmer Consultations</p>
+                <p className="text-sm text-muted-foreground">
+                  Farmer Consultations
+                </p>
               </div>
 
               <div className="bg-card rounded-lg p-6 shadow-sm border border-border col-span-2">
