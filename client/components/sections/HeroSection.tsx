@@ -109,7 +109,7 @@ export function HeroSection() {
                   </span>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Years Experience
+                  Industry Experience
                 </p>
               </div>
 
