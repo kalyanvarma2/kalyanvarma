@@ -77,9 +77,7 @@ export function ContactSection() {
                   <div>
                     <p className="font-medium text-foreground">Location</p>
                     <p className="text-muted-foreground">
-                      Schwerzstrasse 1, H no: 1602
-                      <br />
-                      70599 Stuttgart, Baden-Württemberg, Germany
+                      Stuttgart, Baden-Württemberg, Germany
                     </p>
                   </div>
                 </div>
