@@ -56,7 +56,7 @@ export function AboutSection() {
                   className="group hover:bg-blue-50 hover:border-blue-200 transition-all duration-300"
                   asChild
                 >
-                  <a href="https://linkedin.com/in/kalyan-varma" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/kalyan-varma-447721135" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="h-5 w-5 mr-2 text-blue-600 group-hover:scale-110 transition-transform" />
                     LinkedIn
                   </a>
@@ -80,7 +80,7 @@ export function AboutSection() {
                   className="group hover:bg-pink-50 hover:border-pink-200 transition-all duration-300"
                   asChild
                 >
-                  <a href="https://instagram.com/kalyan.varma" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/imkv_clickz_?igsh=ZXFlZ3M0YnRpNzhw" target="_blank" rel="noopener noreferrer">
                     <Instagram className="h-5 w-5 mr-2 text-pink-600 group-hover:scale-110 transition-transform" />
                     Instagram
                   </a>
