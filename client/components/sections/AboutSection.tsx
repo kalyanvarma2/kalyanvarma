@@ -69,7 +69,7 @@ export function AboutSection() {
             {/* Social Media Connections */}
             <div className="mt-12">
               <h3 className="text-xl font-semibold text-foreground mb-6 text-center">
-                {t.language === 'en' ? "Connect with me" : "���ాతో కనెక్ట్ అవ్వండి"}
+                Connect with me
               </h3>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button
