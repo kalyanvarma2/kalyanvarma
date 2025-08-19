@@ -65,6 +65,62 @@ export function AboutSection() {
                 {t.about.content}
               </p>
             </div>
+
+            {/* Social Media Connections */}
+            <div className="mt-12">
+              <h3 className="text-xl font-semibold text-foreground mb-6 text-center">
+                {t.language === 'en' ? "Connect with me" : "���ాతో కనెక్ట్ అవ్వండి"}
+              </h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="group hover:bg-blue-50 hover:border-blue-200 transition-all duration-300"
+                  asChild
+                >
+                  <a href="https://linkedin.com/in/kalyan-varma" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="h-5 w-5 mr-2 text-blue-600 group-hover:scale-110 transition-transform" />
+                    LinkedIn
+                  </a>
+                </Button>
+
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="group hover:bg-gray-50 hover:border-gray-300 transition-all duration-300"
+                  asChild
+                >
+                  <a href="https://github.com/kalyan-varma" target="_blank" rel="noopener noreferrer">
+                    <Github className="h-5 w-5 mr-2 text-gray-700 group-hover:scale-110 transition-transform" />
+                    GitHub
+                  </a>
+                </Button>
+
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="group hover:bg-pink-50 hover:border-pink-200 transition-all duration-300"
+                  asChild
+                >
+                  <a href="https://instagram.com/kalyan.varma" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="h-5 w-5 mr-2 text-pink-600 group-hover:scale-110 transition-transform" />
+                    Instagram
+                  </a>
+                </Button>
+
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="group hover:bg-red-50 hover:border-red-200 transition-all duration-300"
+                  asChild
+                >
+                  <a href="mailto:varmakalyan2@gmail.com">
+                    <Mail className="h-5 w-5 mr-2 text-red-600 group-hover:scale-110 transition-transform" />
+                    Gmail
+                  </a>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
