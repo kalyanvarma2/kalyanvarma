@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { ArrowRight, Leaf, Users, Award } from "lucide-react";
+import { ArrowRight, Leaf, Users, Award, GraduationCap } from "lucide-react";
 
 export function HeroSection() {
   const { t } = useLanguage();
