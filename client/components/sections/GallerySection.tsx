@@ -8,38 +8,8 @@ export function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   // Placeholder gallery images - you can replace these with real images
-  const galleryImages = [
-    {
-      src: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&h=600&fit=crop",
-      alt: "Field research work",
-      caption: "Conducting field trials in agricultural research",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
-      alt: "Laboratory work",
-      caption: "Molecular techniques and lab analysis",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop",
-      alt: "Crop observation",
-      caption: "Disease phenotyping and crop assessment",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=800&h=600&fit=crop",
-      alt: "Data collection",
-      caption: "Statistical data analytics in the field",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=800&h=600&fit=crop",
-      alt: "Farmer consultation",
-      caption: "Providing technical knowledge to farmers",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop",
-      alt: "Research presentation",
-      caption: "Scientific events and knowledge sharing",
-    },
-  ];
+  // Empty gallery - ready for your photos
+  const galleryImages: any[] = [];
 
   const title = language === "en" ? "Gallery" : "గ్యాలరీ";
   const subtitle =
