@@ -14,9 +14,32 @@ export function HeroSection() {
 
   return (
     <section id="hero" className="relative py-20 lg:py-32 overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-earth-50" />
+      {/* Innovative earthy field theme background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-earth-100 to-green-100" />
+
+      {/* Layered field imagery for depth */}
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1400&h=900&fit=crop')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center bottom',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+
+      {/* Overlapping organic shapes for innovation */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-10 right-10 w-96 h-96 bg-green-200/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-earth-300/15 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-green-300/10 rounded-full blur-2xl" />
+      </div>
+
+      {/* Subtle texture overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+
+      {/* Gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/5" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
