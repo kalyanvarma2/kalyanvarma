@@ -18,7 +18,8 @@
     "start": "node dist/server/node-build.mjs",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "check:merge-conflicts": "if rg -n '^(<<<<<<<|=======|>>>>>>>)' client server shared; then echo 'Merge conflict markers found'; exit 1; else echo 'No merge conflict markers'; fi"
   },
   "dependencies": {
     "dotenv": "^17.2.1",
