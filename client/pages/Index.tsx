@@ -2,11 +2,7 @@ import { Layout } from "@/components/Layout";
 import { FeaturedNewsCarousel } from "@/components/news/FeaturedNewsCarousel";
 import { LatestNewsFeed } from "@/components/news/LatestNewsFeed";
 import { MonthlyHighlightsSection } from "@/components/news/MonthlyHighlightsSection";
-import { cropProtectionNews, monthlyHighlights } from "@/lib/news";
 
-export default function Index() {
-  const featuredStories = cropProtectionNews.filter((story) => story.featured).slice(0, 5);
-  const latestStories = cropProtectionNews.slice(0, 6);
 
   return (
     <Layout>
@@ -23,18 +19,14 @@ export default function Index() {
                 Kalyan Varma
               </h1>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">
-                Crop Sciences researcher focused on sustainable crop protection.
-                This platform curates high-signal crop protection news, market
-                updates, resistance alerts, and practical insights for
-                researchers, advisors, and farmers.
+
               </p>
             </div>
           </div>
         </section>
 
         <FeaturedNewsCarousel stories={featuredStories} />
-        <LatestNewsFeed stories={latestStories} />
-        <MonthlyHighlightsSection highlights={monthlyHighlights} />
+
       </div>
     </Layout>
   );
