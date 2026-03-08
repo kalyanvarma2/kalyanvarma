@@ -80,7 +80,7 @@ export function HeroSection() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Learn More
+                {t.hero.learnMore}
               </Button>
             </div>
           </div>
