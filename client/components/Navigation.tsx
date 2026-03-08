@@ -23,6 +23,7 @@ export function Navigation() {
 
   const navItems = [
     { key: "about", label: t.nav.about },
+    { key: "skills", label: t.nav.skills },
     { key: "experience", label: t.nav.experience },
     { key: "projects", label: t.nav.projects },
     { key: "services", label: t.nav.services },
