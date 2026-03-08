@@ -10,7 +10,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const navItems = [
+interface NavItem {
+  to: string;
+  label: string;
+}
+
+const navItems: NavItem[] = [
   { to: "/", label: "Home" },
   { to: "/news", label: "News Feed" },
   { to: "/events", label: "Events / Conferences" },
@@ -23,6 +28,8 @@ const navItems = [
 export function Navigation() {
   const { language, setLanguage, t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -95,7 +102,7 @@ export function Navigation() {
                 <NavLink
                   key={item.to}
                   to={item.to}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={closeMobileMenu}
                   className={({ isActive }) =>
                     `block w-full text-left px-3 py-2 text-sm font-medium transition-colors ${
                       isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
