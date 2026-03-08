@@ -3,27 +3,45 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Camera, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+type GalleryImage = {
+  src: string;
+  alt: string;
+  captionEn: string;
+  captionTe: string;
+};
+
+const galleryImages: GalleryImage[] = [
+  {
+    src: "https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?w=1200&auto=format&fit=crop",
+    alt: "Crop field survey",
+    captionEn: "Field survey and crop health observation",
+    captionTe: "క్షేత్ర సర్వే మరియు పంట ఆరోగ్య పరిశీలన",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1200&auto=format&fit=crop",
+    alt: "Laboratory sample processing",
+    captionEn: "Laboratory sample preparation and analysis",
+    captionTe: "ప్రయోగశాలలో నమూనా తయారీ మరియు విశ్లేషణ",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?w=1200&auto=format&fit=crop",
+    alt: "Sustainable agriculture landscape",
+    captionEn: "Sustainable farming systems in practice",
+    captionTe: "ఆచరణలో స్థిరమైన వ్యవసాయ వ్యవస్థలు",
+  },
+];
+
 export function GallerySection() {
   const { language } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  // Placeholder gallery images - you can replace these with real images
-  // Empty gallery - ready for your photos
-  const galleryImages: any[] = [];
-
   const title = language === "en" ? "Gallery" : "గ్యాలరీ";
   const subtitle =
     language === "en"
-      ? "A glimpse into my field research and laboratory work"
-      : "నా క్షేత్ర పరిశోధన మరియు ప్రయోగశాల పనుల చూపులు";
+      ? "A glimpse into field research and laboratory work"
+      : "క్షేత్ర పరిశోధన మరియు ప్రయోగశాల పనుల చూపులు";
 
-  const openImage = (index: number) => {
-    setSelectedImage(index);
-  };
-
-  const closeImage = () => {
-    setSelectedImage(null);
-  };
+  const closeImage = () => setSelectedImage(null);
 
   const navigateImage = (direction: "prev" | "next") => {
     if (selectedImage === null) return;
@@ -51,19 +69,19 @@ export function GallerySection() {
           </p>
         </div>
 
-        {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className="group cursor-pointer overflow-hidden rounded-xl bg-card border border-border hover:shadow-lg transition-all duration-300"
-              onClick={() => openImage(index)}
+            <button
+              key={image.src}
+              className="group text-left overflow-hidden rounded-xl bg-card border border-border hover:shadow-lg transition-all duration-300"
+              onClick={() => setSelectedImage(index)}
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                   <Camera className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8" />
@@ -71,28 +89,13 @@ export function GallerySection() {
               </div>
               <div className="p-4">
                 <p className="text-sm text-muted-foreground text-center">
-                  {image.caption}
+                  {language === "en" ? image.captionEn : image.captionTe}
                 </p>
               </div>
-            </div>
+            </button>
           ))}
         </div>
 
-        {/* Coming Soon Message */}
-        <div className="text-center">
-          <div className="bg-card rounded-xl p-8 shadow-sm border border-border border-dashed">
-            <Camera className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-foreground mb-2">
-              More Photos Coming Soon
-            </h3>
-            <p className="text-muted-foreground mb-4">
-              I'm preparing more photos from my field research and laboratory
-              work to share with you.
-            </p>
-          </div>
-        </div>
-
-        {/* Lightbox Modal */}
         {selectedImage !== null && (
           <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
             <div className="relative max-w-4xl max-h-full">
@@ -102,7 +105,6 @@ export function GallerySection() {
                 className="max-w-full max-h-full object-contain rounded-lg"
               />
 
-              {/* Close button */}
               <Button
                 variant="outline"
                 size="icon"
@@ -112,7 +114,6 @@ export function GallerySection() {
                 <X className="h-4 w-4" />
               </Button>
 
-              {/* Navigation buttons */}
               <Button
                 variant="outline"
                 size="icon"
@@ -131,10 +132,11 @@ export function GallerySection() {
                 <ChevronRight className="h-4 w-4" />
               </Button>
 
-              {/* Caption */}
               <div className="absolute bottom-4 left-4 right-4 text-center">
                 <p className="text-white bg-black/50 rounded-lg px-4 py-2 backdrop-blur-sm">
-                  {galleryImages[selectedImage].caption}
+                  {language === "en"
+                    ? galleryImages[selectedImage].captionEn
+                    : galleryImages[selectedImage].captionTe}
                 </p>
               </div>
             </div>
