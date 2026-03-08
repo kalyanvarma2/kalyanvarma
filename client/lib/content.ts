@@ -16,6 +16,7 @@ export const content = {
       subtitle:
         "Experienced in Agricultural Sciences, field trials, molecular techniques, and data analysis. Passionate about combining field and lab expertise to advance sustainable crop improvement and innovation and Committed to leveraging technology to support farmers and enhance productivity",
       cta: "Book a Consultation",
+      learnMore: "Learn More",
     },
     about: {
       title: "About Me",
@@ -129,6 +130,7 @@ export const content = {
       subtitle:
         "స్థిరమైన పంట రక్షణ పరిష్కారాలు మరియు వ్యవసాయ నైప��ణ్యంతో రైతులను శక్తివంతం చేయడం",
       cta: "సలహా బుక్ చేయండి",
+      learnMore: "మరింత తెలుసుకోండి",
     },
     about: {
       title: "���ా గురించి",
