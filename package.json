@@ -20,7 +20,9 @@
     "format.fix": "prettier --write .",
     "typecheck": "tsc",
     "check:merge-conflicts": "if rg -n '^(<<<<<<<|=======|>>>>>>>)' client server shared; then echo 'Merge conflict markers found'; exit 1; else echo 'No merge conflict markers'; fi",
-    "check:merge-conflicts:critical": "if rg -n '^(<<<<<<<|=======|>>>>>>>)' client/components/Navigation.tsx client/components/news/FeaturedNewsCarousel.tsx client/components/news/LatestNewsFeed.tsx client/components/news/MonthlyHighlightsSection.tsx client/lib/news.spec.ts client/lib/news.ts client/pages/Events.tsx client/pages/Index.tsx; then echo 'Critical conflict markers found'; exit 1; else echo 'No critical conflict markers'; fi"
+    "check:merge-conflicts:critical": "if rg -n '^(<<<<<<<|=======|>>>>>>>)' client/components/Navigation.tsx client/components/news/FeaturedNewsCarousel.tsx client/components/news/LatestNewsFeed.tsx client/components/news/MonthlyHighlightsSection.tsx client/lib/news.spec.ts client/lib/news.ts client/pages/Events.tsx client/pages/Index.tsx; then echo 'Critical conflict markers found'; exit 1; else echo 'No critical conflict markers'; fi",
+    "conflicts:list": "git diff --name-only --diff-filter=U || true",
+    "conflicts:guide": "cat MERGE_CONFLICTS.md"
   },
   "dependencies": {
     "dotenv": "^17.2.1",
