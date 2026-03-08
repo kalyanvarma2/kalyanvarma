@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
-import { content, Language, ContentType } from "@/lib/content";
+import { content, Language } from "@/lib/content";
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: ContentType;
+  t: (typeof content)[Language];
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
