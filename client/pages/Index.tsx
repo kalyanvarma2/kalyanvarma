@@ -2,19 +2,7 @@ import { Layout } from "@/components/Layout";
 import { FeaturedNewsCarousel } from "@/components/news/FeaturedNewsCarousel";
 import { LatestNewsFeed } from "@/components/news/LatestNewsFeed";
 import { MonthlyHighlightsSection } from "@/components/news/MonthlyHighlightsSection";
-import { UpcomingEventsPreview } from "@/components/news/UpcomingEventsPreview";
-import {
-  getFeaturedStories,
-  getLatestNews,
-  getMonthlyHighlights,
-  getUpcomingEvents,
-} from "@/lib/services/newsService";
 
-export default function Index() {
-  const featuredStories = getFeaturedStories(5);
-  const latestStories = getLatestNews().slice(0, 6);
-  const highlights = getMonthlyHighlights().slice(0, 3);
-  const upcomingEvents = getUpcomingEvents(3);
 
   return (
     <Layout>
@@ -31,19 +19,14 @@ export default function Index() {
                 Kalyan Varma
               </h1>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">
-                Crop sciences researcher and editorial curator focused on crop
-                protection intelligence. This platform highlights major
-                developments in chemistry, biologicals, resistance, regulation,
-                and stewardship for students, researchers, and advisors.
+
               </p>
             </div>
           </div>
         </section>
 
         <FeaturedNewsCarousel stories={featuredStories} />
-        <LatestNewsFeed items={latestStories} />
-        <MonthlyHighlightsSection highlights={highlights} />
-        <UpcomingEventsPreview events={upcomingEvents} />
+
       </div>
     </Layout>
   );

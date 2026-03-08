@@ -14,7 +14,7 @@ export function MonthlyHighlightsSection({
           This Month in Crop Protection
         </h2>
         <p className="text-muted-foreground mt-2">
-          Aggregated editorial highlights to help students and researchers track major developments.
+
         </p>
       </div>
 
@@ -25,13 +25,7 @@ export function MonthlyHighlightsSection({
             className="rounded-xl border border-border bg-card p-5 shadow-sm"
           >
             <p className="text-xs uppercase tracking-wide text-primary mb-2">
-              {highlight.month}/{highlight.year} • {highlight.category}
-            </p>
-            <h3 className="font-semibold text-foreground mb-2">{highlight.title}</h3>
-            <p className="text-sm text-muted-foreground mb-3">{highlight.summary}</p>
-            <p className="text-xs text-muted-foreground">
-              Related reports: {highlight.relatedNewsIds.length}
-            </p>
+
           </article>
         ))}
       </div>
